@@ -45,6 +45,12 @@
 *.idb
 *.pdb
 
+# Generated Files
+*.log
+*.status
+Ted
+Ted.static
+
 # Kernel Module Compile Results
 *.mod*
 *.cmd
