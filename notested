@@ -1,0 +1,18 @@
+tedDraw.c:660 -> drIBarPixels.drY0
+tedDrawTextLine.c:526 -> docDrawSetFont
+
+DrawingContent->dcLayoutContext->lcDocument->bdProperties.dpColorPalette
+
+Init
+====
+Struct | Init Function | Called From
+--- | --- | ---
+EditApplication | TedApplication | main
+EditDocument | tedNew/OpenDocument | appNew/OpenDocument
+TedDocument | tedMakePrivateData | appMakeDocumentWindow
+DocumentRectangle | guiCollectExposures | appDocExposeHandler
+DrawingContext | docInitDrawingContext | tedDrawRectangle
+LayoutContext | tesSetScreenLayoutContext | tedFinishDocumentSetup
+BufferDocument | tedMakeDocument | tedNewDocument
+DocumentProperties | docNewDocument | docNewFile
+ColorPalette | utilInitColorPalette | docMakeDocumentPropertyLists

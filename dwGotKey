@@ -1,0 +1,81 @@
+./appFrame/appScrollDocument.c:    guiExposeDrawingWidgetRectangle( dw->dwWidget, &drScreen );
+./appFrame/appScrollDocument.c:    guiExposeDrawingWidgetRectangle( dw->dwWidget, &drScreen );
+./appFrame/appKeystrokeMotif.c:		(*dw->dwGotString)( dw->dwOwner, (char *)scratch, step );
+./appFrame/appKeystrokeMotif.c:    (*dw->dwGotKey)( dw->dwOwner, keysym, state );
+./appFrame/appKeystrokeMotif.c:    if  ( dw->dwInputContext )
+./appFrame/appKeystrokeMotif.c:	(void) /* gotString= */ XmbLookupString( dw->dwInputContext, keyEvent,
+./appFrame/appKeystrokeMotif.c:    XtAddEventHandler( dw->dwWidget, KeyPressMask, False,
+./appFrame/appKeystrokeMotif.c:	    dw->dwInputContext= XCreateIC( im,
+./appFrame/appKeystrokeMotif.c:		XNClientWindow,		XtWindow( dw->dwWidget ),
+./appFrame/appKeystrokeMotif.c:	else{ dw->dwInputContext= (XIC)0;	}
+./appFrame/appKeystrokeMotif.c:    else{ dw->dwInputContext= (XIC)0;	}
+./appFrame/appDocumentGtk.c:    gtk_signal_connect( GTK_OBJECT( dw->dwWidget ),
+./appFrame/appDocumentGtk.c:    gtk_signal_connect( GTK_OBJECT( dw->dwWidget ),
+./appFrame/appDocumentGtk.c:    gtk_signal_connect( GTK_OBJECT( dw->dwWidget ),
+./appFrame/appDocumentGtk.c:    gtk_signal_connect( GTK_OBJECT( dw->dwWidget ),
+./appFrame/appDocumentGtk.c:    guiDrawSetRedrawHandler( dw->dwWidget, appDocExposeHandler, (void *)ed );
+./appFrame/appDocumentGtk.c:	appGuiSetFocusChangeHandler( dw->dwWidget,
+./appFrame/appDocumentGtk.c:	guiDrawSetButtonPressHandler( dw->dwWidget,
+./appFrame/appDocumentGtk.c:	gtk_widget_add_events( dw->dwWidget, GDK_POINTER_MOTION_MASK );
+./appFrame/appDocumentGtk.c:	guiDrawSetScrollHandler( dw->dwWidget,
+./appFrame/appDocumentGtk.c:    dw->dwOwner= (void *)ed;
+./appFrame/appDocumentGtk.c:    dw->dwGotString= ea->eaDocGotString;
+./appFrame/appDocumentGtk.c:    dw->dwGotKey= ea->eaDocGotKey;
+./appFrame/#appDocumentGtk.c#:    guiDrawSetRedrawHandler( dw->dwWidget, appDocExposeHandler, (void *)ed );
+./appFrame/#appDocumentGtk.c#:	appGuiSetFocusChangeHandler( dw->dwWidget,
+./appFrame/#appDocumentGtk.c#:	guiDrawSetButtonPressHandler( dw->dwWidget,
+./appFrame/#appDocumentGtk.c#:	gtk_widget_add_events( dw->dwWidget, GDK_POINTER_MOTION_MASK );
+./appFrame/#appDocumentGtk.c#:	guiDrawSetScrollHandler( dw->dwWidget,
+./appFrame/#appDocumentGtk.c#:    dw->dwOwner= (void *)ed;
+./appFrame/#appDocumentGtk.c#:    dw->dwGotString= ea->eaDocGotString;
+./appFrame/#appDocumentGtk.c#:    dw->dwGotKey= ea->eaDocGotKey;
+./appFrame/appDocumentMotif.c:    guiDrawSetRedrawHandler( dw->dwWidget,
+./appFrame/appDocumentMotif.c:	appGuiSetFocusChangeHandler( dw->dwWidget,
+./appFrame/appDocumentMotif.c:	guiDrawSetButtonPressHandler( dw->dwWidget,
+./appFrame/appDocumentMotif.c:	guiDrawSetScrollHandler( dw->dwWidget,
+./appFrame/appDocumentMotif.c:    dw->dwOwner= (void *)ed;
+./appFrame/appDocumentMotif.c:    dw->dwGotString= ea->eaDocGotString;
+./appFrame/appDocumentMotif.c:    dw->dwGotKey= ea->eaDocGotKey;
+./appFrame/appDocumentMotif.c:	XDefineCursor( XtDisplay( dw->dwWidget ),
+./appFrame/appDocument.c~:    if  ( dw->dwInputContext )
+./appFrame/appDocument.c~:	{ XDestroyIC( dw->dwInputContext ); }
+./appFrame/appDocument.c~:    if  ( dw->dwInputContext )
+./appFrame/appDocument.c~:	{ g_object_unref( dw->dwInputContext ); }
+./appFrame/appDocument.c~:    dw->dwWidget= (APP_WIDGET)0;
+./appFrame/appDocument.c~:    dw->dwInputContext= (XIC)0;
+./appFrame/appDocument.c~:	dw->dwInputContext= (GtkIMContext *)0;
+./appFrame/appDocument.c~:	dw->dwInputContext= 0;
+./appFrame/appDocument.c~:    XtVaSetValues( dw->dwWidget,
+./appFrame/appDocument.c~:    XtVaGetValues( dw->dwWidget,
+./appFrame/appDocument.c~:    gtk_drawing_area_size( GTK_DRAWING_AREA( dw->dwWidget ), wide, high );
+./appFrame/appDocument.c~:    gtk_object_set_user_data( GTK_OBJECT( dw->dwWidget ), (void *)ed );
+./appFrame/appDocument.c~:    guiGetBackgroundColor( &(ed->edBackgroundColor), dw->dwWidget );
+./appFrame/appKeystrokeGtk.c:    if  ( dw->dwInputContext )
+./appFrame/appKeystrokeGtk.c:	if  ( gtk_im_context_filter_keypress( dw->dwInputContext, keyEvent ) )
+./appFrame/appKeystrokeGtk.c:	if  ( dw->dwGotString && unicode > 0 )
+./appFrame/appKeystrokeGtk.c:		(*dw->dwGotString)( dw->dwOwner, (char *)scratch, step );
+./appFrame/appKeystrokeGtk.c:    if  ( ! IS_MODIFIER(keyEvent->keyval) && dw->dwGotKey )
+./appFrame/appKeystrokeGtk.c:	(*dw->dwGotKey)( dw->dwOwner, keyEvent->keyval, keyEvent->state );
+./appFrame/appKeystrokeGtk.c:    if  ( dw->dwGotString )
+./appFrame/appKeystrokeGtk.c:	(*dw->dwGotString)( dw->dwOwner, str, strlen( str ) );
+./appFrame/appKeystrokeGtk.c:    gtk_widget_add_events( dw->dwWidget, GDK_KEY_PRESS_MASK );
+./appFrame/appKeystrokeGtk.c:    gtk_widget_add_events( dw->dwWidget, GDK_KEY_RELEASE_MASK );
+./appFrame/appKeystrokeGtk.c:    gtk_signal_connect_after( GTK_OBJECT( dw->dwWidget ), "key_press_event",
+./appFrame/appKeystrokeGtk.c:    dw->dwInputContext= gtk_im_multicontext_new();
+./appFrame/appKeystrokeGtk.c:    if  ( dw->dwInputContext )
+./appFrame/appKeystrokeGtk.c:	g_signal_connect( dw->dwInputContext, "commit",
+./appFrame/appDocument.c:    if  ( dw->dwInputContext )
+./appFrame/appDocument.c:	{ XDestroyIC( dw->dwInputContext ); }
+./appFrame/appDocument.c:    if  ( dw->dwInputContext )
+./appFrame/appDocument.c:	{ g_object_unref( dw->dwInputContext ); }
+./appFrame/appDocument.c:    dw->dwWidget= (APP_WIDGET)0;
+./appFrame/appDocument.c:    dw->dwInputContext= (XIC)0;
+./appFrame/appDocument.c:	dw->dwInputContext= (GtkIMContext *)0;
+./appFrame/appDocument.c:	dw->dwInputContext= 0;
+./appFrame/appDocument.c:    XtVaSetValues( dw->dwWidget,
+./appFrame/appDocument.c:    XtVaGetValues( dw->dwWidget,
+./appFrame/appDocument.c:    gtk_drawing_area_size( GTK_DRAWING_AREA( dw->dwWidget ), wide, high );
+./appFrame/appDocument.c:    gtk_object_set_user_data( GTK_OBJECT( dw->dwWidget ), (void *)ed );
+./appFrame/appDocument.c:    guiGetBackgroundColor( &(ed->edBackgroundColor), dw->dwWidget );
+./Ted/tedDocument.c:    if  ( dw->dwColors.acAllocator.caDepth < 4 )
+./Ted/tedDocument.c~:    if  ( dw->dwColors.acAllocator.caDepth < 4 )
