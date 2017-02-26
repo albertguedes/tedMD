@@ -618,7 +618,7 @@ void tedDrawRectangle(		EditDocument *		ed,
 	  ! sd.sdIsIBarSelection	)
 	{
 	if  ( tedDrawSelectionBackground( td, selRootNode, selRootTree,
-                                      &sdd, &dc, &ds, &sg, &(RGB8Color){.rgb8Red = 0xFF, .rgb8Green = 0, .rgb8Blue = 0, .rgb8Alpha = 0}))//&selColor ) )
+                                      &sdd, &dc, &ds, &sg, &selColor ) )
 	    { LDEB(1); return;	}
 	}
 

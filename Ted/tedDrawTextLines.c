@@ -530,7 +530,19 @@ int tedDrawSpan(	const DrawTextLine *		dtl,
     tedGetIBarRect(&ibar, &dc->dcSelectionGeometry->sgHead, &(dc->dcLayoutContext));
     if((ibar.drY0 == dtl->dtlLineRectangle.drY0) && (ibar.drY1 == dtl->dtlLineRectangle.drY1)) {
       docDrawSetColorNumber( dc, (void *)sdd, 1);//colorcount);//ta->taTextColorNumber
-        if(ta->taFontIsBold){
+        if(ta->taFontIsBold && ta->taFontIsSlanted){
+            mdstring = malloc(sizeof(char)*nbLen+6);
+            mdstring[0] = '*';
+            mdstring[1] = '*';
+            mdstring[2] = '*';
+            mdstring[nbLen+3] = '*';
+            mdstring[nbLen+4] = '*';
+            mdstring[nbLen+5] = '*';
+            memcpy(&mdstring[3], printString, nbLen);
+            nbLen += 6;
+            tempx0 -= 60;
+        }
+        else if(ta->taFontIsBold){
             mdstring = malloc(sizeof(char)*nbLen+4);
             mdstring[0] = '*';
             mdstring[1] = '*';
@@ -539,7 +551,15 @@ int tedDrawSpan(	const DrawTextLine *		dtl,
             memcpy(&mdstring[2], printString, nbLen);
             nbLen += 4;
             tempx0 -= 40;
-    }
+        }
+        else if(ta->taFontIsSlanted){
+            mdstring = malloc(sizeof(char)*nbLen+2);
+            mdstring[0] = '*';
+            mdstring[nbLen+1] = '*';
+            memcpy(&mdstring[1], printString, nbLen);
+            nbLen += 2;
+            tempx0 -= 20;
+        }
     }
     if(!mdstring){
       mdstring = malloc(sizeof(char)*nbLen);
